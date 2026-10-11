@@ -182,14 +182,14 @@ function createPetal() {
 }
 setInterval(createPetal, 800);
 
-// ✅ 资源数据（已加 url）
+// ✅ 资源数据（已修复 url + 去掉 confirm）
 const resourceData = [
   { t:"单机游戏合集", s:"断网可玩", url:"https://pan.xunlei.com/s/VP2pOLeE-cBym3uJIKaFKhDsA1?pwd=v7z4#" },
   { t:"天涯神贴", s:"电子书", url:"https://pan.xunlei.com/s/VOyt5uXrFoe8HH0Zc9-xSPqzA1?pwd=mcx8#" },
   { t:"免费追剧app", s:"看剧无忧", url:"https://pan.xunlei.com/s/VP3doKJJUbNXTyBRNnrLgTkSA1?pwd=dkmr#" },
   { t:"学习资料库", s:"电子课本", url:"https://pan.xunlei.com/s/VP3dozaGz-FP-OGEYM9S9cXMA1?pwd=znwn#" },
   { t:"高清壁纸合集", s:"手机壁纸", url:"https://pan.xunlei.com/s/VP3dpqNKvu6X32VLAXZ5YiKEA1?pwd=2vmi#" },
-  { t:"中国历代名画大全", s:"名画", url:"https://https://pan.xunlei.com/s/VP3dr-Sx9Aal4TB0WPM53yDPA1?pwd=gk3i#" },
+  { t:"中国历代名画大全", s:"名画", url:"https://pan.xunlei.com/s/VP3dr-Sx9Aal4TB0WPM53yDPA1?pwd=gk3i#" },
   { t:"AI指令提示词", s:"AI提示词", url:"https://pan.xunlei.com/s/VOyt56j8ZspBs88sEvIkcSBuA1?pwd=tk32#" },
   { t:"学霸笔记类资料汇总", s:"学霸笔记", url:"https://pan.xunlei.com/s/VP3dsYJL3hvB_p9AwONFUlzdA1?pwd=4y9q#" },
   { t:"绝版古籍大全", s:"绝版电子书", url:"https://pan.xunlei.com/s/VP3dsxkmBHWoSkWQ9pzcYTnfA1?pwd=jmmj#" },
@@ -210,7 +210,7 @@ function render(){
 	  <div class="res-card p-4 rounded-lg flex flex-col h-full">
 		<h4 class="font-bold text-[#4A3018] text-base">${i.t}</h4>
 		<p class="text-xs text-[#888] mt-1 mb-4">（${i.s}）</p>
-		<a href="${i.url}" target="_blank" onclick="return confirm('即将跳转到资源页面，是否继续？')" class="${isRed?'btn-red':'btn-gold'} block w-full text-center py-1.5 rounded text-sm font-bold mt-auto">
+		<a href="${i.url}" target="_blank" class="${isRed?'btn-red':'btn-gold'} block w-full text-center py-1.5 rounded text-sm font-bold mt-auto">
 		  ${isRed?'领取券':'获取资源'}
 		</a>
 	  </div>`;
